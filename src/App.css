@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,300,400,700&display=swap');
+
+.App {
+  text-align: center;
+}
+
+.Title {
+  font-size: 4rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 100;
+}
+
+.Secret {
+  background-color: #eee;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+
+.Secret .word-block {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Secret .word {
+  font-size: 2rem;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-weight: 100;
+  padding: 4px 20px;
+  transition-duration: 0.2s;
+}
+
+.Secret .word.active {
+  color: white;
+  background-color: black;
+  transform: scale(1.1, 1.1);
+}
+
+.Secret.winning {
+  background-color: #adffd5;
+}
