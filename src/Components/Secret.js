@@ -7,25 +7,14 @@ const Secret = (props) => {
   }
   component.handleClick = (event) => {
     console.log(event.target.innerHTML)
-    let word = event.target.innerHTML
-    component.setState({currentWord: word})
   }
-  component.checkActive = (word) => {
-    if (component.state.currentWord === word) {
-      return "word active"
-    }
-    return "word"
-  }
-  component.checkWin = () => {
-    if (component.state.currentWord === props.answer) {
-      return "winning"
-    }
-    return "losing"
-  }
+  component.checkActive = (word) => {}
+  component.checkWin = () => {}
   component.render = () => {
     return (
-      <div className={"Secret " + component.checkWin()}>
+      <div className="Secret" >
         <h1>Secret word {props.title}</h1>
+        <h2>{component.state}</h2>
         <div className="word-block">
           <h3 className={component.checkActive(props.words[0])} onClick={component.handleClick}>{props.words[0]}</h3>
           <h3 className={component.checkActive(props.words[1])} onClick={component.handleClick}>{props.words[1]}</h3>
